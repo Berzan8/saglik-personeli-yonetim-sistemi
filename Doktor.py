@@ -52,5 +52,3 @@ class Doktor(personel):
         else :
             yenimaas=self.maas*(deneyim_yili/10)+self.maas
             print("yeni maas:",yenimaas)
-doktorlar=Doktor(12,"kar","tanesi","tor",23000,"red",3,"veli")
-doktorlar.maas_artir(3)
