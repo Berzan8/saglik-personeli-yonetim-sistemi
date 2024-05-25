@@ -44,3 +44,13 @@ class Doktor(personel):
     
     def __str__(self, personel_no, ad, soyad, departman, maas,uzmanlik,deneyim_yili,hastane):
         return print(f"{super().__str__(personel_no, ad, soyad, departman, maas)} uzmanlik:{uzmanlik}\ndeneyim yili:{deneyim_yili}\n hastane:{hastane}")
+    
+    def maas_artir(self,deneyim_yili):
+        if deneyim_yili<0:
+            print("maaş artirmak için en az bir yil çalismaniz gerekir.")
+            
+        else :
+            yenimaas=self.maas*(deneyim_yili/10)+self.maas
+            print("yeni maas:",yenimaas)
+doktorlar=Doktor(12,"kar","tanesi","tor",23000,"red",3,"veli")
+doktorlar.maas_artir(3)
