@@ -69,7 +69,3 @@ class personel:
     def __str__(self,personel_no,ad,soyad,departman,maas):
         
         return print(f"personel_numarasi:{personel_no} \nadi:{ad} \nsoyadi:{soyad} \ndepartman:{departman} \n maasi:{maas} \n")
-
-adiniz=personel(12,"berzan","erdal","muhasebe",12000)
-adiniz.__str__(12,"berzan","erdal","muhasebe",12000)
-adiniz.set_ad("berzan")
