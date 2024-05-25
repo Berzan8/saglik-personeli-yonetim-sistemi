@@ -43,7 +43,7 @@ class Doktor(personel):
             print(f"Hata: {e}")
     
     def __str__(self, personel_no, ad, soyad, departman, maas,uzmanlik,deneyim_yili,hastane):
-        return print(f"{super().__str__(personel_no, ad, soyad, departman, maas)}\n uzmanlik:{uzmanlik}\ndeneyim yili:{deneyim_yili}\n hastane:{hastane}")
+        return print(f"{super().__str__(personel_no, ad, soyad, departman, maas)} uzmanlik:{uzmanlik}\ndeneyim yili:{deneyim_yili}\n hastane:{hastane}")
     
 doktorlar=Doktor(12,"mert","kurt","ortopedi",15000,"omurga cerrahi",3,"cigli egitim hastanesi")
 doktorlar.__str__(12,"mert","kurt","ortopedi",15000,"omurga cerrahi",3,"cigli egitim hastanesi")
