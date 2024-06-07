@@ -31,11 +31,9 @@ class Doktor(personel):
         return hastane
     
     def __str__(self):
-        return print(f"{super().__str__()} uzmanlik:{self.uzmanlik}\ndeneyim yili:{self.deneyim_yili}\n hastane:{self.hastane}")
+        return str( super().__str__())+str(print(f" uzmanlik:{self.uzmanlik}\ndeneyim yili:{self.deneyim_yili}\n hastane:{self.hastane}"))
     
     def maas_artir(self,oran):
         yeni_maas=self.set_maas(self.get_maas() * (1 + oran))
         return print("yeni maasiniz:",yeni_maas)
     
-yeni=Doktor(12,"berzan","erdal","kbb",19000,"kulak",3,"cigli")
-yeni.__str__()
