@@ -47,6 +47,6 @@ class personel:
         self.maas=maas
         return self.maas
         
-    def __str__(self,personel_no,ad,soyad,departman,maas):
+    def __str__(self):
         
-        return print(f"personel_numarasi:{personel_no} \nadi:{ad} \nsoyadi:{soyad} \ndepartman:{departman} \n maasi:{maas}")
+        return print(f"personel_numarasi:{self.personel_no} \nadi:{self.ad} \nsoyadi:{self.soyad} \ndepartman:{self.departman} \n maasi:{self.maas}")
