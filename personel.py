@@ -49,4 +49,4 @@ class personel:
         
     def __str__(self):
         
-        return print(f"personel_numarasi:{self.personel_no} \nadi:{self.ad} \nsoyadi:{self.soyad} \ndepartman:{self.departman} \n maasi:{self.maas}")
+        return print(f"personel_numarasi:{self.personel_no} \nadi:{self.ad} \nsoyadi:{self.soyad} \ndepartman:{self.departman} \nmaasi:{self.maas}")
