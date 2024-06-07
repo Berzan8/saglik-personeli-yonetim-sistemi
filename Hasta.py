@@ -82,5 +82,3 @@ class Hasta:
         tedavi_süresi=bitis-baslangic
         print(f"Bugün ile girilen tarih arasındaki gün farkı: {tedavi_süresi.days} gün")
         
-yeni=Hasta(12,"gjkg","jhgjkhg","22-12-1222","gsd0","fgdfhdf")
-yeni.__str__()
