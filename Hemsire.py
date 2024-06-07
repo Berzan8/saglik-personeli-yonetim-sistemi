@@ -11,40 +11,28 @@ class Hemsire(personel):
         return self.calisma_saati
     
     def set_calisma_saati(self,calisma_saati):
-        try:
-            if isinstance(calisma_saati,int) and calisma_saati.strip():
-                self.calisma_saati = calisma_saati
-            else:
-                raise ValueError("Lütfen rakamlardan olusan çalişma  saatinizi giriniz!!...")
-        except ValueError as e:
-            print(f"Hata: {e}")
+        
+        self.calisma_saati=calisma_saati
+        return self.calisma_saati
             
     def get_sertifika(self):
         return self.sertifika
     
     def set_sertifika(self,sertifika):
-        try:
-            if isinstance(sertifika,str) and sertifika.strip():
-                self.sertifika = sertifika
-            else:
-                raise ValueError("Lütfen harflerden olusan sertifikanizi giriniz!!...")
-        except ValueError as e:
-            print(f"Hata: {e}")
+       
+       self.sertifika=sertifika
+       return self.sertifika
             
     def get_hastane(self):
         return self.hastane
     
     def set_hastane(self,hastane):
-        try:
-            if isinstance(hastane,str) and hastane.strip():
-                self.hastane = hastane
-            else:
-                raise ValueError("Lütfen harflerden olusan hastane adini giriniz!!...")
-        except ValueError as e:
-            print(f"Hata: {e}")
+       
+       self.hastane=hastane
+       return self.hastane
     
-    def __str__(self, personel_no, ad, soyad, departman, maas,calisma_saati,sertifika,hastane):
-        return print(f"{super().__str__(personel_no, ad, soyad, departman, maas)}calisma saati:{calisma_saati}sertifika:{sertifika}hastane:{hastane} ")
+    def __str__(self):
+        return str(super().__str__())+str(print(f"calisma saati:{self.calisma_saati}sertifika:{self.sertifika}hastane:{self.hastane} "))
     
     def maas_artir(self,calisma_saati):
         if calisma_saati<4:
@@ -53,3 +41,4 @@ class Hemsire(personel):
         else :
             yenimaas=self.maas*(calisma_saati/10)+self.maas
             print("yeni maas:",yenimaas)
+            
