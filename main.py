@@ -9,34 +9,42 @@ import pandas as pd
 def main():
     try:
         # Personel nesneleri
+        print("Personel listesi")
         personel1 = personel(1, "Ahmet", "Yılmaz", "Muhasebe", 5000)
         personel2 = personel(2, "Mehmet", "Öztürk", "İnsan Kaynakları", 6000)
         personel1.__str__()
         personel2.__str__()
+        print("\n")
 
         # Doktor nesneleri
+        print("Doktor listesi")
         doktor1 = Doktor(3, "Ali", "Kara", "Kardiyoloji", 8000, "Kardiyolog", 10, "Merkez Hastanesi")
         doktor2 = Doktor(4, "Ayşe", "Demir", "Nöroloji", 9000, "Nörolog", 7, "Şehir Hastanesi")
         doktor3 = Doktor(5, "Fatma", "Şahin", "Ortopedi", 8500, "Ortopedist", 5, "Devlet Hastanesi")
         doktor1.__str__()
         doktor2.__str__()
         doktor3.__str__()
+        print("\n")
 
         # Hemşire nesneleri
+        print("Hemşire listesi")
         hemsire1 = Hemsire(6, "Elif", "Kaya", "Acil", 4000, 40, "Yoğun Bakım Sertifikası", "Merkez Hastanesi")
         hemsire2 = Hemsire(7, "Serkan", "Yıldırım", "Ameliyathane", 4500, 45, "Ameliyathane Sertifikası", "Şehir Hastanesi")
         hemsire3 = Hemsire(8, "Sevil", "Çelik", "Pediatri", 4200, 40, "Pediatri Sertifikası", "Devlet Hastanesi")
         hemsire1.__str__()
         hemsire2.__str__()
         hemsire3.__str__()
+        print("\n")
 
         # Hasta nesneleri
+        print("Hasta listesi")
         hasta1 = Hasta(1, "Zeynep", "Çakır", "1995-02-15", "Grip", ["İlaç Tedavisi"])
         hasta2 = Hasta(2, "Efe", "Aslan", "1988-07-23", "Kırık", ["Alçı", "Fizyoterapi"])
         hasta3 = Hasta(3, "Buse", "Ak", "2000-11-05", "Alerji", ["İlaç Tedavisi"])
         hasta1.__str__()
         hasta2.__str__()
         hasta3.__str__()
+        print("\n")
         
         # Tüm nesneleri bir listeye ekleyelim
         tum_nesneler = [personel1, personel2, doktor1, doktor2, doktor3, hemsire1, hemsire2, hemsire3, hasta1, hasta2, hasta3]
@@ -62,7 +70,7 @@ def main():
         df = pd.DataFrame(data)
 
         # Boş olan değişken değerleri için 0 atama
-        df.fillna(0, inplace=True)
+        #df.fillna(0, inplace=True)
 
         # Doktorları uzmanlık alanlarına göre gruplandırarak toplam sayısını hesaplama ve yazdırma
         doktor_uzmanlik_gruplama = df[df["uzmanlik"] != 0].groupby("uzmanlik").size()
